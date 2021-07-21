@@ -8,3 +8,8 @@ export declare type Contact = {
   bio: string;
   profileImageSource: ImageSourcePropType;
 };
+
+export declare type Lock = {
+  type: number | null;
+  timestamp: number | null;
+};

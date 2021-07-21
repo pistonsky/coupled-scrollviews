@@ -4,7 +4,7 @@ const data = [
     firstName: 'Allan',
     lastName: 'Munger',
     title: 'CEO',
-    bio: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    bio: "I'm in charge of product development and the whole technical part: web-app, mobile apps and API. Backend works on NodeJS + PostgreSQL, hosted on Heroku.com for convenience. For analytics I use Amplitude, Firebase and Facebook. This project required a lot of work on animations. For Tinder-like cards I used a popular public package and modified it for my needs - optimised performance, fixed animation bugs. Worked with deeplinks to bump viral mechanics. Integrated with Instagram (share to Instagram story feature) - had to develop my own native modules for that feature to work. The app also has chat functionality, which was made using standard React Native means (no packages).",
     profileImageSource: require('./assets/Allan-Munger.png'),
   },
   {
@@ -12,7 +12,7 @@ const data = [
     firstName: 'Amanda',
     lastName: 'Brady',
     title: 'Writer',
-    bio: 'Lifelong gamer. Devoted organizer. Analyst. Food ninja. Total social media advocate.',
+    bio: "I'm in charge of product development and the whole technical part: web-app, mobile apps and API. Backend works on NodeJS + PostgreSQL, hosted on Heroku.com for convenience. For analytics I use Amplitude, Firebase and Facebook. This project required a lot of work on animations. For Tinder-like cards I used a popular public package and modified it for my needs - optimised performance, fixed animation bugs. Worked with deeplinks to bump viral mechanics. Integrated with Instagram (share to Instagram story feature) - had to develop my own native modules for that feature to work. The app also has chat functionality, which was made using standard React Native means (no packages).",
     profileImageSource: require('./assets/Amanda-Brady.png'),
   },
   {
@@ -20,7 +20,7 @@ const data = [
     firstName: 'Ashley',
     lastName: 'Mc Carthy',
     title: 'Writer',
-    bio: 'Lifelong gamer. Devoted organizer. Analyst. Food ninja. Total social media advocate.',
+    bio: "I'm in charge of product development and the whole technical part: web-app, mobile apps and API. Backend works on NodeJS + PostgreSQL, hosted on Heroku.com for convenience. For analytics I use Amplitude, Firebase and Facebook. This project required a lot of work on animations. For Tinder-like cards I used a popular public package and modified it for my needs - optimised performance, fixed animation bugs. Worked with deeplinks to bump viral mechanics. Integrated with Instagram (share to Instagram story feature) - had to develop my own native modules for that feature to work. The app also has chat functionality, which was made using standard React Native means (no packages).",
     profileImageSource: require('./assets/Ashley-Mc-Carthy.png'),
   },
   {
@@ -28,7 +28,7 @@ const data = [
     firstName: 'Amanda',
     lastName: 'Brady',
     title: 'Writer',
-    bio: 'Lifelong gamer. Devoted organizer. Analyst. Food ninja. Total social media advocate.',
+    bio: "I'm in charge of product development and the whole technical part: web-app, mobile apps and API. Backend works on NodeJS + PostgreSQL, hosted on Heroku.com for convenience. For analytics I use Amplitude, Firebase and Facebook. This project required a lot of work on animations. For Tinder-like cards I used a popular public package and modified it for my needs - optimised performance, fixed animation bugs. Worked with deeplinks to bump viral mechanics. Integrated with Instagram (share to Instagram story feature) - had to develop my own native modules for that feature to work. The app also has chat functionality, which was made using standard React Native means (no packages).",
     profileImageSource: require('./assets/Carlos-Slattery.png'),
   },
   {
@@ -36,7 +36,7 @@ const data = [
     firstName: 'Amanda',
     lastName: 'Brady',
     title: 'Writer',
-    bio: 'Lifelong gamer. Devoted organizer. Analyst. Food ninja. Total social media advocate.',
+    bio: "I'm in charge of product development and the whole technical part: web-app, mobile apps and API. Backend works on NodeJS + PostgreSQL, hosted on Heroku.com for convenience. For analytics I use Amplitude, Firebase and Facebook. This project required a lot of work on animations. For Tinder-like cards I used a popular public package and modified it for my needs - optimised performance, fixed animation bugs. Worked with deeplinks to bump viral mechanics. Integrated with Instagram (share to Instagram story feature) - had to develop my own native modules for that feature to work. The app also has chat functionality, which was made using standard React Native means (no packages).",
     profileImageSource: require('./assets/Carole-Poland.png'),
   },
   {
@@ -44,7 +44,7 @@ const data = [
     firstName: 'Amanda',
     lastName: 'Brady',
     title: 'Writer',
-    bio: 'Lifelong gamer. Devoted organizer. Analyst. Food ninja. Total social media advocate.',
+    bio: "I'm in charge of product development and the whole technical part: web-app, mobile apps and API. Backend works on NodeJS + PostgreSQL, hosted on Heroku.com for convenience. For analytics I use Amplitude, Firebase and Facebook. This project required a lot of work on animations. For Tinder-like cards I used a popular public package and modified it for my needs - optimised performance, fixed animation bugs. Worked with deeplinks to bump viral mechanics. Integrated with Instagram (share to Instagram story feature) - had to develop my own native modules for that feature to work. The app also has chat functionality, which was made using standard React Native means (no packages).",
     profileImageSource: require('./assets/Cecil-Folk.png'),
   },
   {
@@ -68,7 +68,7 @@ const data = [
     firstName: 'Colin',
     lastName: 'Ballinger',
     title: 'Senior React Native Developer',
-    bio: 'The app also uses in-app purchases. Users can buy promotion for their events, which effectively sends notifications to other users. Fetched prices and currencies directly from stores.',
+    bio: "I'm in charge of product development and the whole technical part: web-app, mobile apps and API. Backend works on NodeJS + PostgreSQL, hosted on Heroku.com for convenience. For analytics I use Amplitude, Firebase and Facebook. This project required a lot of work on animations. For Tinder-like cards I used a popular public package and modified it for my needs - optimised performance, fixed animation bugs. Worked with deeplinks to bump viral mechanics. Integrated with Instagram (share to Instagram story feature) - had to develop my own native modules for that feature to work. The app also has chat functionality, which was made using standard React Native means (no packages).",
     profileImageSource: require('./assets/Colin-Ballinger.png'),
   },
   {
@@ -76,7 +76,7 @@ const data = [
     firstName: 'Daisy',
     lastName: 'Phillips',
     title: 'Senior React Native Developer',
-    bio: 'The UI of the app was designed using Figma. Worked together with designer. Most screens are made using Auto Layout, which is super-convenient when transforming designs into code.',
+    bio: "I'm in charge of product development and the whole technical part: web-app, mobile apps and API. Backend works on NodeJS + PostgreSQL, hosted on Heroku.com for convenience. For analytics I use Amplitude, Firebase and Facebook. This project required a lot of work on animations. For Tinder-like cards I used a popular public package and modified it for my needs - optimised performance, fixed animation bugs. Worked with deeplinks to bump viral mechanics. Integrated with Instagram (share to Instagram story feature) - had to develop my own native modules for that feature to work. The app also has chat functionality, which was made using standard React Native means (no packages).",
     profileImageSource: require('./assets/Daisy-Phillips.png'),
   },
   {
@@ -84,7 +84,7 @@ const data = [
     firstName: 'Elliot',
     lastName: 'Woodward',
     title: 'Senior React Native Developer',
-    bio: 'I also have another small app "Phrazes" - it\'s a simple phrase book, with audio recording/playback features, with background audio support (player API). Localised in 2 languages.',
+    bio: "I'm in charge of product development and the whole technical part: web-app, mobile apps and API. Backend works on NodeJS + PostgreSQL, hosted on Heroku.com for convenience. For analytics I use Amplitude, Firebase and Facebook. This project required a lot of work on animations. For Tinder-like cards I used a popular public package and modified it for my needs - optimised performance, fixed animation bugs. Worked with deeplinks to bump viral mechanics. Integrated with Instagram (share to Instagram story feature) - had to develop my own native modules for that feature to work. The app also has chat functionality, which was made using standard React Native means (no packages).",
     profileImageSource: require('./assets/Elliot-Woodward.png'),
   },
   {
@@ -92,7 +92,7 @@ const data = [
     firstName: 'Elvia',
     lastName: 'Atkins',
     title: 'Senior React Native Developer',
-    bio: "Parkly helps people book parking spaces. It's a young fast-paced startup. I came just a few months after they started, and picked up mobile apps.",
+    bio: "I'm in charge of product development and the whole technical part: web-app, mobile apps and API. Backend works on NodeJS + PostgreSQL, hosted on Heroku.com for convenience. For analytics I use Amplitude, Firebase and Facebook. This project required a lot of work on animations. For Tinder-like cards I used a popular public package and modified it for my needs - optimised performance, fixed animation bugs. Worked with deeplinks to bump viral mechanics. Integrated with Instagram (share to Instagram story feature) - had to develop my own native modules for that feature to work. The app also has chat functionality, which was made using standard React Native means (no packages).",
     profileImageSource: require('./assets/Elvia-Atkins.png'),
   },
   {
@@ -100,7 +100,7 @@ const data = [
     firstName: 'Erik',
     lastName: 'Nason',
     title: 'Senior React Native Developer',
-    bio: 'Worked a lot with animations, haptic feedback, maps, markers, performance optimisations, app clips, payment frameworks, native modules, analytics (Amplitude, AppsFlyer, Firebase Analytics), notifications, deeplinks, bluetooth/nfc interfaces. Helped with product development, suggested features, helped with design (in Figma).',
+    bio: "I'm in charge of product development and the whole technical part: web-app, mobile apps and API. Backend works on NodeJS + PostgreSQL, hosted on Heroku.com for convenience. For analytics I use Amplitude, Firebase and Facebook. This project required a lot of work on animations. For Tinder-like cards I used a popular public package and modified it for my needs - optimised performance, fixed animation bugs. Worked with deeplinks to bump viral mechanics. Integrated with Instagram (share to Instagram story feature) - had to develop my own native modules for that feature to work. The app also has chat functionality, which was made using standard React Native means (no packages).",
     profileImageSource: require('./assets/Erik-Nason.png'),
   },
   {
@@ -108,7 +108,7 @@ const data = [
     firstName: 'Henry',
     lastName: 'Brill',
     title: 'Senior React Native Developer',
-    bio: 'Developed the whole app from scratch. The app was about booking office spaces. Worked with maps, markers, payments (via a webview). Helped with design a bit.',
+    bio: "I'm in charge of product development and the whole technical part: web-app, mobile apps and API. Backend works on NodeJS + PostgreSQL, hosted on Heroku.com for convenience. For analytics I use Amplitude, Firebase and Facebook. This project required a lot of work on animations. For Tinder-like cards I used a popular public package and modified it for my needs - optimised performance, fixed animation bugs. Worked with deeplinks to bump viral mechanics. Integrated with Instagram (share to Instagram story feature) - had to develop my own native modules for that feature to work. The app also has chat functionality, which was made using standard React Native means (no packages).",
     profileImageSource: require('./assets/Henry-Brill.png'),
   },
   {
@@ -116,7 +116,7 @@ const data = [
     firstName: 'Isaac',
     lastName: 'Fielder',
     title: 'Senior React Native Developer',
-    bio: 'Distillery is an outsourcing company. I was assigned an old project with a lot of legacy code, and my primary job was to refactor and optimise that code for performance. Mastered various approaches on react component performance optimisation, and practiced a lot of TypeScript.',
+    bio: "I'm in charge of product development and the whole technical part: web-app, mobile apps and API. Backend works on NodeJS + PostgreSQL, hosted on Heroku.com for convenience. For analytics I use Amplitude, Firebase and Facebook. This project required a lot of work on animations. For Tinder-like cards I used a popular public package and modified it for my needs - optimised performance, fixed animation bugs. Worked with deeplinks to bump viral mechanics. Integrated with Instagram (share to Instagram story feature) - had to develop my own native modules for that feature to work. The app also has chat functionality, which was made using standard React Native means (no packages).",
     profileImageSource: require('./assets/Isaac-Fielder.png'),
   },
   {
@@ -132,7 +132,7 @@ const data = [
     firstName: 'Kat',
     lastName: 'larsson',
     title: 'Senior React Native Developer',
-    bio: 'Design and development of complex high loaded centralized data management system.',
+    bio: "Gini is a smart spending tracker - a financial app, like banking apps. The team was about 20 international specialists, 4 of which (including me) were React Native developers. We used scrum, daily standups, retrospectives, all in English language. When I joined, the app wasn't yet on production, and my job was to fix that. I started by upgrading all core libraries (including react-native), then optimized performance, and added a lot of new features after that. We reworked the whole logic of the app - using redux-saga, implemented testing frameworks, converted the code to TypeScript. In the last couple months I joined the brainstorming group which was in charge of deciding which features to roll out next.",
     profileImageSource: require('./assets/Kat-larsson.png'),
   },
   {
@@ -172,7 +172,7 @@ const data = [
     firstName: 'Mauricio',
     lastName: 'August',
     title: 'Senior React Native Developer',
-    bio: "It was my classmate who connected me to Lynks Limited. At Lynks I have been everyone if you're talking about development. Need to fix some bugs in old IP PBX web interface? No problem. We used smarty templates there, and the system did not even have jquery, so I made a revolution. Need to develop couple new modules like integrated update system? Sure. Then we decided to stop making new modules for the old system and develop the new completely redesigned asterisk-based PBX. I was given a list of desired features, put them all in Pivotal Tracker, choosed Yii as a lightweight convenient framework, and started working. The modules were quite techy, with even audio playback functionalities. I implemented a very useful access control role system that I later used in another project in the company. My need in exciting tasks was fullfilled, it is very important for me. In fall 2013 we started developing an Android app, so I got a lot of new experience in Java and in developing for mobile, but still continued to do PHP server scripts and web interfaces' backends. Later that android app solution was recognized by a bigger Moscow-based company and they even tried to buy the whole solution idea. The new IP PBX that I developed was also recognized by a bigger local company which allowed Lynks Limited to expand and grow their markets.",
+    bio: "It was my classmate who connected me to Lynks Limited. At Lynks I have been everyone if you're talking about development. Need to fix some bugs in old IP PBX web interface? No problem. We used smarty templates there, and the system did not even have jquery, so I made a revolution. Need to develop couple new modules like integrated update system? Sure. Then we decided to stop making new modules for the old system and develop the new completely redesigned asterisk-based PBX. I was given a list of desired features, put them all in Pivotal Tracker, choosed Yii as a lightweight convenient framework, and started working. The modules were quite techy, with even audio playback functionalities. I implemented a very useful access control role system that I later used in another project in the company.",
     profileImageSource: require('./assets/Mauricio-August.png'),
   },
   {
@@ -180,7 +180,7 @@ const data = [
     firstName: 'Miguel',
     lastName: 'Garcia',
     title: 'Senior React Native Developer',
-    bio: 'Sarena USA gave me my first paid developer job. I found it on craigslist.org when I was living in Florida, USA. These guys were in urgent need of a skilled php developer to handle their orders for simple restaurant front pages. We were using Wordpress for that, and I was a fast-learner. I remember after some time there was an order for an online-store, and I made it based on OpenCart CMS (my proud point!). Then Jean-David decided to do a startup, in Q&A (question-answer, like stackoverflow), and there was a lot of planning, most - on me. My experience climbed up like a rocket, I learned CodeIgniter hands-on, discovered this very nice tutorial portal envato.com, passed a lot of sessions on PHP frameworks, javascript frameworks, css frameworks, also we picked PivotalTracker as an agile development platform, which helped a lot in organizing my tons of work. I was working day and night on that project, mainly on client-side javascript (jquery in fact).',
+    bio: 'Sarena USA gave me my first paid developer job. I found it on craigslist.org when I was living in Florida, USA. These guys were in urgent need of a skilled php developer to handle their orders for simple restaurant front pages. We were using Wordpress for that, and I was a fast-learner. I remember after some time there was an order for an online-store, and I made it based on OpenCart CMS (my proud point!). Then Jean-David decided to do a startup, in Q&A (question-answer, like stackoverflow), and there was a lot of planning, most - on me. My experience climbed up like a rocket, I learned CodeIgniter hands-on, discovered this very nice tutorial portal envato.com, passed a lot of sessions on PHP frameworks, javascript frameworks, css frameworks.',
     profileImageSource: require('./assets/Miguel-Garcia.png'),
   },
   {
@@ -196,7 +196,7 @@ const data = [
     firstName: 'Robert',
     lastName: 'Tolbert',
     title: 'Senior React Native Developer',
-    bio: "I like to work in international teams that use agile practices, especially scrum. Coworkers say that I'm really good at code reviews, and that I have a very good eye for details.",
+    bio: "Gini is a smart spending tracker - a financial app, like banking apps. The team was about 20 international specialists, 4 of which (including me) were React Native developers. We used scrum, daily standups, retrospectives, all in English language. When I joined, the app wasn't yet on production, and my job was to fix that. I started by upgrading all core libraries (including react-native), then optimized performance, and added a lot of new features after that. We reworked the whole logic of the app - using redux-saga, implemented testing frameworks, converted the code to TypeScript. In the last couple months I joined the brainstorming group which was in charge of deciding which features to roll out next.",
     profileImageSource: require('./assets/Robert-Tolbert.png'),
   },
   {
@@ -204,7 +204,7 @@ const data = [
     firstName: 'Robin',
     lastName: 'Counts',
     title: 'Senior React Native Developer',
-    bio: 'My dream job would be to develop a user-facing app for mass market which would have a nice design and a set of interesting features.',
+    bio: 'Sarena USA gave me my first paid developer job. I found it on craigslist.org when I was living in Florida, USA. These guys were in urgent need of a skilled php developer to handle their orders for simple restaurant front pages. We were using Wordpress for that, and I was a fast-learner. I remember after some time there was an order for an online-store, and I made it based on OpenCart CMS (my proud point!). Then Jean-David decided to do a startup, in Q&A (question-answer, like stackoverflow), and there was a lot of planning, most - on me. My experience climbed up like a rocket, I learned CodeIgniter hands-on, discovered this very nice tutorial portal envato.com, passed a lot of sessions on PHP frameworks, javascript frameworks, css frameworks.',
     profileImageSource: require('./assets/Robin-Counts.png'),
   },
   {
@@ -212,7 +212,7 @@ const data = [
     firstName: 'Tim',
     lastName: 'Deboer',
     title: 'Senior React Native Developer',
-    bio: 'Horraay, I got Animated.Value is a class, and Its type is an AnimatedValue. Then as usual to find Its path, I right click, then I go to type definition with "Visual code", but I found nothing.',
+    bio: "Gini is a smart spending tracker - a financial app, like banking apps. The team was about 20 international specialists, 4 of which (including me) were React Native developers. We used scrum, daily standups, retrospectives, all in English language. When I joined, the app wasn't yet on production, and my job was to fix that. I started by upgrading all core libraries (including react-native), then optimized performance, and added a lot of new features after that. We reworked the whole logic of the app - using redux-saga, implemented testing frameworks, converted the code to TypeScript. In the last couple months I joined the brainstorming group which was in charge of deciding which features to roll out next.",
     profileImageSource: require('./assets/Tim-Deboer.png'),
   },
   {
@@ -220,7 +220,7 @@ const data = [
     firstName: 'Wanda',
     lastName: 'Howard',
     title: 'Senior React Native Developer',
-    bio: "It's because when you install types for particular library using npm, they get installed under node_modules/@types/<library-name>/ location as index.d.ts file. Therefore using VSCode's navigate to type definition feature takes you to this index.d.ts file instead of taking you within library.",
+    bio: "Gini is a smart spending tracker - a financial app, like banking apps. The team was about 20 international specialists, 4 of which (including me) were React Native developers. We used scrum, daily standups, retrospectives, all in English language. When I joined, the app wasn't yet on production, and my job was to fix that. I started by upgrading all core libraries (including react-native), then optimized performance, and added a lot of new features after that. We reworked the whole logic of the app - using redux-saga, implemented testing frameworks, converted the code to TypeScript. In the last couple months I joined the brainstorming group which was in charge of deciding which features to roll out next.",
     profileImageSource: require('./assets/Wanda-Howard.png'),
   },
 ];
