@@ -1,29 +1,17 @@
 import * as React from 'react';
-import {
-  View,
-  Text,
-  Image,
-  ListRenderItem,
-  FlatListProps,
-  TouchableWithoutFeedback,
-  Platform,
-} from 'react-native';
+import { View, Text, Platform } from 'react-native';
 import Animated, {
   useAnimatedScrollHandler,
-  useAnimatedGestureHandler,
   useSharedValue,
   useAnimatedStyle,
   useAnimatedRef,
   useAnimatedReaction,
   withTiming,
   scrollTo,
-  runOnJS,
-  runOnUI,
 } from 'react-native-reanimated';
-import { PanGestureHandler } from 'react-native-gesture-handler';
 
+import AnimatedAvatar from './AnimatedAvatar';
 import type { Contact, Lock } from './types';
-
 import styles, { SIZE, HEIGHT } from './styles';
 
 const AVATARS: number = 0;
@@ -43,10 +31,6 @@ const ContactsView: React.FC<{ data: Contact[] }> = ({ data }) => {
   });
   const avatarsScrollViewRef = useAnimatedRef<Animated.ScrollView>();
   const detailsScrollViewRef = useAnimatedRef<Animated.ScrollView>();
-
-  const logSharedValue = (value: any) => {
-    console.log(value);
-  };
 
   const scrollHandlerForAvatars = useAnimatedScrollHandler(event => {
     translationX.value = event.contentOffset.x;
@@ -83,7 +67,7 @@ const ContactsView: React.FC<{ data: Contact[] }> = ({ data }) => {
       const detailsOffset = (scrollX.value * detailsHeightValue.value) / SIZE;
       return { avatarsOffset, detailsOffset };
     },
-    ({ avatarsOffset, detailsOffset }, prevValues) => {
+    ({ avatarsOffset, detailsOffset }) => {
       if (lock.value.type === DETAILS) {
         scrollTo(avatarsScrollViewRef, avatarsOffset, 0, false);
       } else if (lock.value.type === AVATARS) {
@@ -95,38 +79,6 @@ const ContactsView: React.FC<{ data: Contact[] }> = ({ data }) => {
   const animatedShadowOpacityStyles = useAnimatedStyle(() => ({
     opacity: withTiming(shadowOpacity.value, { duration: 400 }),
   }));
-
-  const animatedAvatarContainerStyles: {
-    backgroundColor: string;
-    transform: [{ scale: number }];
-  }[] = [];
-  for (let i = 0; i < data.length; i += 1) {
-    animatedAvatarContainerStyles.push(
-      useAnimatedStyle(() => {
-        const distance = Math.abs(translationX.value - i * SIZE);
-        if (distance >= SIZE) {
-          return {
-            backgroundColor: '#AAAAFF00',
-            transform: [{ scale: 1 }],
-          };
-        }
-        let factor = (SIZE - distance) / SIZE;
-        if (factor < 0) {
-          factor = 0;
-        }
-        factor *= factor * factor;
-        const opacity = 255 * factor;
-        let hexOpacity = Math.floor(opacity).toString(16);
-        if (hexOpacity.length === 1) {
-          hexOpacity = '0' + hexOpacity;
-        }
-        return {
-          backgroundColor: '#AAAAFF' + hexOpacity,
-          transform: [{ scale: 1 + factor * 0.1 }],
-        };
-      }, [translationX]),
-    );
-  }
 
   return (
     <View
@@ -155,22 +107,14 @@ const ContactsView: React.FC<{ data: Contact[] }> = ({ data }) => {
           scrollEventThrottle={16}
           showsHorizontalScrollIndicator={false}>
           {data.map((item, index) => (
-            <TouchableWithoutFeedback
+            <AnimatedAvatar
               key={item.id.toString()}
-              onPress={() => {
-                runOnUI((offset: number) => {
-                  'worklet';
-                  scrollTo(avatarsScrollViewRef, offset, 0, true);
-                })(index * SIZE);
-              }}>
-              <Animated.View
-                style={[
-                  styles.avatarContainer,
-                  animatedAvatarContainerStyles[index],
-                ]}>
-                <Image style={styles.avatar} source={item.profileImageSource} />
-              </Animated.View>
-            </TouchableWithoutFeedback>
+              index={index}
+              highlightColor="#AAAAFF"
+              animatedScrollOffset={translationX}
+              containerScrollViewRef={avatarsScrollViewRef}
+              image={item.profileImageSource}
+            />
           ))}
         </Animated.ScrollView>
       </View>
@@ -190,7 +134,7 @@ const ContactsView: React.FC<{ data: Contact[] }> = ({ data }) => {
               snapToInterval: detailsHeight,
             },
           })}>
-          {data.map((item, index) => (
+          {data.map(item => (
             <View key={item.id.toString()} style={{ height: detailsHeight }}>
               <Text style={styles.name}>
                 <Text style={styles.firstName}>{item.firstName}</Text>

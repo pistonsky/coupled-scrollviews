@@ -3,7 +3,13 @@ import { Dimensions } from 'react-native';
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 const RATIO = SCREEN_HEIGHT / SCREEN_WIDTH;
 
-export default function a(small: any, regular: any, big?: any, X?: any, XMax?: any) {
+export default function a(
+  small: any,
+  regular: any,
+  big?: any,
+  X?: any,
+  XMax?: any,
+) {
   switch (true) {
     case SCREEN_HEIGHT === 896 || SCREEN_HEIGHT === 926:
       return XMax !== undefined ? XMax : big !== undefined ? big : regular;
