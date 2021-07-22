@@ -12,8 +12,10 @@ import styles, { SIZE } from './styles';
 const AnimatedAvatar: React.FC<AnimatedAvatarProps> = ({
   index,
   highlightColor,
+  activeScale,
   animatedScrollOffset,
   containerScrollViewRef,
+  name,
   image,
 }) => {
   const animatedAvatarContainerStyles: {
@@ -39,12 +41,13 @@ const AnimatedAvatar: React.FC<AnimatedAvatarProps> = ({
     }
     return {
       backgroundColor: highlightColor + hexOpacity,
-      transform: [{ scale: 1 + factor * 0.1 }],
+      transform: [{ scale: 1 + factor * (activeScale - 1) }],
     };
   });
 
   return (
     <TouchableWithoutFeedback
+      testID={`avatar-container-${index}`}
       onPress={() => {
         runOnUI((offset: number) => {
           'worklet';
@@ -52,6 +55,7 @@ const AnimatedAvatar: React.FC<AnimatedAvatarProps> = ({
         })(index * SIZE);
       }}>
       <Animated.View
+        accessibilityLabel={name}
         style={[styles.avatarContainer, animatedAvatarContainerStyles]}>
         <Image style={styles.avatar} source={image} />
       </Animated.View>

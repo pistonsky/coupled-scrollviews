@@ -11,13 +11,17 @@ import Animated, {
 } from 'react-native-reanimated';
 
 import AnimatedAvatar from './AnimatedAvatar';
-import type { Contact, Lock } from './types';
+import type { Lock, ContactsViewProps } from './types';
 import styles, { SIZE, HEIGHT } from './styles';
 
 const AVATARS: number = 0;
 const DETAILS: number = 1;
 
-const ContactsView: React.FC<{ data: Contact[] }> = ({ data }) => {
+const ContactsView: React.FC<ContactsViewProps> = ({
+  data,
+  activeAvatarScale,
+  activeAvatarHighlightColor,
+}) => {
   const [detailsHeight, setDetailsHeight] = React.useState<number>(0);
   const detailsHeightValue: Animated.SharedValue<number> =
     useSharedValue<number>(0);
@@ -82,6 +86,7 @@ const ContactsView: React.FC<{ data: Contact[] }> = ({ data }) => {
 
   return (
     <View
+      testID="contacts-view"
       style={styles.container}
       onLayout={({
         nativeEvent: {
@@ -96,6 +101,7 @@ const ContactsView: React.FC<{ data: Contact[] }> = ({ data }) => {
           style={[styles.shadowBackground, animatedShadowOpacityStyles]}
         />
         <Animated.ScrollView
+          testID="avatars-scrollview"
           ref={avatarsScrollViewRef}
           style={styles.avatarsFlatListContainer}
           contentContainerStyle={styles.contentContainerStyle}
@@ -110,43 +116,47 @@ const ContactsView: React.FC<{ data: Contact[] }> = ({ data }) => {
             <AnimatedAvatar
               key={item.id.toString()}
               index={index}
-              highlightColor="#AAAAFF"
+              highlightColor={activeAvatarHighlightColor}
+              activeScale={activeAvatarScale}
               animatedScrollOffset={translationX}
               containerScrollViewRef={avatarsScrollViewRef}
+              name={`${item.firstName} ${item.lastName}`}
               image={item.profileImageSource}
             />
           ))}
         </Animated.ScrollView>
       </View>
-      {!!detailsHeight && (
-        <Animated.ScrollView
-          ref={detailsScrollViewRef}
-          style={{ height: detailsHeight }}
-          scrollToOverflowEnabled
-          onScroll={scrollHandlerForDetails}
-          scrollEventThrottle={16}
-          {...Platform.select({
-            ios: {
-              pagingEnabled: true,
-              decelerationRate: 'fast',
-            },
-            android: {
-              snapToInterval: detailsHeight,
-            },
-          })}>
-          {data.map(item => (
-            <View key={item.id.toString()} style={{ height: detailsHeight }}>
-              <Text style={styles.name}>
-                <Text style={styles.firstName}>{item.firstName}</Text>
-                {`\xa0${item.lastName}`}
-              </Text>
-              <Text style={styles.title}>{item.title}</Text>
-              <Text style={styles.heading}>About me</Text>
-              <Text style={styles.bio}>{item.bio}</Text>
-            </View>
-          ))}
-        </Animated.ScrollView>
-      )}
+      <Animated.ScrollView
+        testID="details-scrollview"
+        ref={detailsScrollViewRef}
+        style={{ height: detailsHeight }}
+        scrollToOverflowEnabled
+        onScroll={scrollHandlerForDetails}
+        scrollEventThrottle={16}
+        {...Platform.select({
+          ios: {
+            pagingEnabled: true,
+            decelerationRate: 'fast',
+          },
+          android: {
+            snapToInterval: detailsHeight,
+          },
+        })}>
+        {data.map((item, index) => (
+          <View
+            key={item.id.toString()}
+            testID={`details-container-${index}`}
+            style={{ height: detailsHeight }}>
+            <Text style={styles.name}>
+              <Text style={styles.firstName}>{item.firstName}</Text>
+              {`\xa0${item.lastName}`}
+            </Text>
+            <Text style={styles.title}>{item.title}</Text>
+            <Text style={styles.heading}>About me</Text>
+            <Text style={styles.bio}>{item.bio}</Text>
+          </View>
+        ))}
+      </Animated.ScrollView>
     </View>
   );
 };

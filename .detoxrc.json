@@ -1,0 +1,25 @@
+{
+  "testRunner": "jest",
+  "runnerConfig": "e2e/config.json",
+  "skipLegacyWorkersInjection": true,
+  "apps": {
+    "ios": {
+      "type": "ios.app",
+      "binaryPath": "/Users/pistonsky/Library/Developer/Xcode/DerivedData/CoupledScrollViews-dvxoqjplxalylxgiakxxxxzpclru/Build/Products/Debug-iphonesimulator/CoupledScrollViews.app"
+    }
+  },
+  "devices": {
+    "simulator": {
+      "type": "ios.simulator",
+      "device": {
+        "type": "iPhone 11"
+      }
+    }
+  },
+  "configurations": {
+    "ios": {
+      "device": "simulator",
+      "app": "ios"
+    }
+  }
+}
