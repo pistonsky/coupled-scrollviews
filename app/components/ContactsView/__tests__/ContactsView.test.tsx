@@ -1,10 +1,7 @@
 import 'react-native';
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-import {
-  withReanimatedTimer,
-  advanceAnimationByTime,
-} from 'react-native-reanimated/lib/reanimated2/jestUtils';
+import { withReanimatedTimer, advanceAnimationByTime } from 'react-native-reanimated/lib/reanimated2/jestUtils';
 
 import ContactsView from '@components/ContactsView';
 import { SIZE } from '@components/ContactsView/styles';
@@ -28,9 +25,7 @@ describe('Animations', () => {
         />,
       );
       const avatarsScrollView = getByTestId('avatars-scrollview');
-      const secondAvatarContainer = getByLabelText(
-        `${data[1].firstName} ${data[1].lastName}`,
-      );
+      const secondAvatarContainer = getByLabelText(`${data[1].firstName} ${data[1].lastName}`);
 
       fireEvent.scroll(avatarsScrollView, {
         nativeEvent: { contentOffset: { x: SIZE } },

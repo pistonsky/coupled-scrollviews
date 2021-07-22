@@ -1,13 +1,9 @@
 import * as React from 'react';
 import { Image, TouchableWithoutFeedback } from 'react-native';
-import Animated, {
-  runOnUI,
-  scrollTo,
-  useAnimatedStyle,
-} from 'react-native-reanimated';
+import Animated, { runOnUI, scrollTo, useAnimatedStyle } from 'react-native-reanimated';
 
 import type { AnimatedAvatarProps } from './types';
-import styles, { SIZE } from './styles';
+import styles, { AVATAR_WIDTH } from './styles';
 
 const AnimatedAvatar: React.FC<AnimatedAvatarProps> = ({
   index,
@@ -22,14 +18,14 @@ const AnimatedAvatar: React.FC<AnimatedAvatarProps> = ({
     backgroundColor: string;
     transform: [{ scale: number }];
   } = useAnimatedStyle(() => {
-    const distance = Math.abs(animatedScrollOffset.value - index * SIZE);
-    if (distance >= SIZE) {
+    const distance = Math.abs(animatedScrollOffset.value - index * AVATAR_WIDTH);
+    if (distance >= AVATAR_WIDTH) {
       return {
         backgroundColor: highlightColor + '00',
         transform: [{ scale: 1 }],
       };
     }
-    let factor = (SIZE - distance) / SIZE;
+    let factor = (AVATAR_WIDTH - distance) / AVATAR_WIDTH;
     if (factor < 0) {
       factor = 0;
     }
@@ -52,11 +48,9 @@ const AnimatedAvatar: React.FC<AnimatedAvatarProps> = ({
         runOnUI((offset: number) => {
           'worklet';
           scrollTo(containerScrollViewRef, offset, 0, true);
-        })(index * SIZE);
+        })(index * AVATAR_WIDTH);
       }}>
-      <Animated.View
-        accessibilityLabel={name}
-        style={[styles.avatarContainer, animatedAvatarContainerStyles]}>
+      <Animated.View accessibilityLabel={name} style={[styles.avatarContainer, animatedAvatarContainerStyles]}>
         <Image style={styles.avatar} source={image} />
       </Animated.View>
     </TouchableWithoutFeedback>

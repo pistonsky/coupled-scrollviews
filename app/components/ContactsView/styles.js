@@ -6,8 +6,8 @@ const MARGIN_HORIZONTAL = a(16, 20);
 const MARGIN_VERTICAL = a(20, 20);
 const BORDER_WIDTH = 4;
 const IMAGE_SIZE = a(64, 96);
-export const SIZE = IMAGE_SIZE + MARGIN_HORIZONTAL;
-export const HEIGHT = IMAGE_SIZE + BORDER_WIDTH * 2 + MARGIN_VERTICAL * 2;
+export const AVATAR_WIDTH = IMAGE_SIZE + MARGIN_HORIZONTAL;
+export const DETAILS_HEIGHT = IMAGE_SIZE + BORDER_WIDTH * 2 + MARGIN_VERTICAL * 2;
 
 const styles = StyleSheet.create({
   container: {
@@ -16,11 +16,10 @@ const styles = StyleSheet.create({
   },
   avatarsFlatListContainer: {
     flex: 0,
-    height: HEIGHT,
+    height: DETAILS_HEIGHT,
   },
   contentContainerStyle: {
-    paddingHorizontal:
-      (Dimensions.get('window').width - (IMAGE_SIZE + MARGIN_HORIZONTAL)) / 2,
+    paddingHorizontal: (Dimensions.get('window').width - (IMAGE_SIZE + MARGIN_HORIZONTAL)) / 2,
     paddingVertical: 0,
     alignItems: 'center',
   },

@@ -14,11 +14,7 @@ const styles = StyleSheet.create({
 const ContactsScreen: React.FC<void> = ({}) => {
   return (
     <View style={styles.container}>
-      <ContactsView
-        data={data}
-        activeAvatarScale={1.1}
-        activeAvatarHighlightColor="#AAAAFF"
-      />
+      <ContactsView data={data} activeAvatarScale={1.1} activeAvatarHighlightColor="#AAAAFF" />
     </View>
   );
 };
