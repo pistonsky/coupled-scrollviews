@@ -4,10 +4,10 @@ import { render, fireEvent } from '@testing-library/react-native';
 import { withReanimatedTimer, advanceAnimationByTime } from 'react-native-reanimated/lib/reanimated2/jestUtils';
 
 import ContactsView from '@components/ContactsView';
-import { SIZE } from '@components/ContactsView/styles';
+import { AVATAR_WIDTH } from '@components/ContactsView/styles';
 import data from 'mocks/data';
 
-describe('Animations', () => {
+describe('Avatar animations', () => {
   const activeAvatarHighlightColor = '#AAAAFF';
   const activeAvatarScale = 1.1;
   const activeStyle = {
@@ -28,7 +28,7 @@ describe('Animations', () => {
       const secondAvatarContainer = getByLabelText(`${data[1].firstName} ${data[1].lastName}`);
 
       fireEvent.scroll(avatarsScrollView, {
-        nativeEvent: { contentOffset: { x: SIZE } },
+        nativeEvent: { contentOffset: { x: AVATAR_WIDTH } },
       });
       advanceAnimationByTime(100);
       expect(secondAvatarContainer).toHaveAnimatedStyle(activeStyle);

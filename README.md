@@ -36,7 +36,7 @@ If you're not on M1 mac, remove `arch -arm64` from `brew install` command.
 
 ### Unit tests
 
-Use `yarn test`. It will test functionality of highlighting active profile's avatar.
+Use `yarn test`. It will test functionality of highlighting active profile's avatar, synchronization of scrollviews and `isActive` value that is used for animation of shadow which separates two scrollviews (by testing useCoupledScrollViews hook).
 
 ### End-to-end tests
 
