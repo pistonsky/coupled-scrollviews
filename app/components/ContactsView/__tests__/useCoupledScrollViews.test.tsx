@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import Animated, { useAnimatedStyle } from 'react-native-reanimated';
 import { withReanimatedTimer, advanceAnimationByTime } from 'react-native-reanimated/lib/reanimated2/jestUtils';
 import { render, fireEvent } from '@testing-library/react-native';
-import useCoupledScrollViews from '../useCoupledScrollViews';
+import useCoupledScrollViews from 'react-native-coupled-scrollviews';
 
 const ITEM_WIDTH = 10;
 const ITEM_HEIGHT = 25;

@@ -22,6 +22,7 @@ describe('Avatar animations', () => {
           data={data}
           activeAvatarScale={activeAvatarScale}
           activeAvatarHighlightColor={activeAvatarHighlightColor}
+          onPress={() => {}}
         />,
       );
       const avatarsScrollView = getByTestId('avatars-scrollview');

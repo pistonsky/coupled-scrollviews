@@ -10,6 +10,7 @@ module.exports = {
           tests: ['./tests/'],
           '@components': './app/components',
           '@screens': './app/screens',
+          'react-native-coupled-scrollviews': './app/lib/react-native-coupled-scrollviews',
         },
       },
     ],

@@ -10,11 +10,6 @@ export declare type Contact = {
   profileImageSource: ImageSourcePropType;
 };
 
-export declare type Lock = {
-  type: number | null;
-  timestamp: number | null;
-};
-
 export declare type ContactsViewProps = {
   data: Contact[];
   activeAvatarScale: number;

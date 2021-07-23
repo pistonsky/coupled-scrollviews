@@ -1,5 +1,3 @@
-import { RefObject } from 'react';
-import { NativeSyntheticEvent, NativeScrollEvent } from 'react-native';
 import Animated, {
   useAnimatedScrollHandler,
   useSharedValue,
@@ -8,21 +6,9 @@ import Animated, {
   scrollTo,
 } from 'react-native-reanimated';
 
-import type { Lock } from './types';
+import type { Lock, CoupledScrollViewsHook } from './types';
 
-const useCoupledScrollViews: (
-  mockedScrollTo?: (ref: RefObject<Animated.ScrollView>, x: number, y: number, animated: boolean) => void,
-) => [
-  Animated.SharedValue<number>,
-  Animated.SharedValue<number>,
-  Animated.SharedValue<number>,
-  (event: NativeSyntheticEvent<NativeScrollEvent>) => void,
-  (event: NativeSyntheticEvent<NativeScrollEvent>) => void,
-  Animated.SharedValue<number>,
-  Animated.SharedValue<number>,
-  React.RefObject<Animated.ScrollView>,
-  React.RefObject<Animated.ScrollView>,
-] = (mockedScrollTo?: (ref: RefObject<Animated.ScrollView>, x: number, y: number, animated: boolean) => void) => {
+const useCoupledScrollViews: CoupledScrollViewsHook = mockedScrollTo => {
   const scrollA: Animated.SharedValue<number> = useSharedValue<number>(0);
   const scrollB: Animated.SharedValue<number> = useSharedValue<number>(0);
   const scrollX: Animated.SharedValue<number> = useSharedValue<number>(0);

@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { View, Text, Platform } from 'react-native';
 import Animated, { useAnimatedStyle, withTiming } from 'react-native-reanimated';
+import { useCoupledScrollViews } from 'react-native-coupled-scrollviews';
 
 import AnimatedAvatar from './AnimatedAvatar';
-import useCoupledScrollViews from './useCoupledScrollViews';
 import type { ContactsViewProps } from './types';
 import styles, { AVATAR_WIDTH, DETAILS_HEIGHT } from './styles';
 
