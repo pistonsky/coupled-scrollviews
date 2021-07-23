@@ -7,18 +7,25 @@ import useCoupledScrollViews from './useCoupledScrollViews';
 import type { ContactsViewProps } from './types';
 import styles, { AVATAR_WIDTH, DETAILS_HEIGHT } from './styles';
 
-const ContactsView: React.FC<ContactsViewProps> = ({ data, activeAvatarScale, activeAvatarHighlightColor }) => {
+const ContactsView: React.FC<ContactsViewProps> = ({
+  data,
+  activeAvatarScale,
+  activeAvatarHighlightColor,
+  onPress,
+}) => {
   const [detailsHeight, setDetailsHeight] = React.useState<number>(0);
 
   const [
     isActive,
     avatarWidthSV,
     detailsHeightSV,
-    avatarsScrollViewRef,
-    detailsScrollViewRef,
     scrollHandlerForAvatars,
     scrollHandlerForDetails,
     translationX,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    translationY,
+    avatarsScrollViewRef,
+    detailsScrollViewRef,
   ] = useCoupledScrollViews();
 
   const animatedShadowOpacityStyles = useAnimatedStyle(() => ({
@@ -65,6 +72,7 @@ const ContactsView: React.FC<ContactsViewProps> = ({ data, activeAvatarScale, ac
               containerScrollViewRef={avatarsScrollViewRef}
               name={`${item.firstName} ${item.lastName}`}
               image={item.profileImageSource}
+              onPress={onPress}
             />
           ))}
         </Animated.ScrollView>
@@ -93,7 +101,7 @@ const ContactsView: React.FC<ContactsViewProps> = ({ data, activeAvatarScale, ac
             </Text>
             <Text style={styles.title}>{item.title}</Text>
             <Text style={styles.heading}>About me</Text>
-            <Text style={styles.bio}>{item.bio}</Text>
+            <Text style={styles.bio}>{item.bio.split('\n\n')[0]}</Text>
           </View>
         ))}
       </Animated.ScrollView>

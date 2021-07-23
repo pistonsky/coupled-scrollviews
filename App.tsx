@@ -10,14 +10,14 @@
 
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
 
 import ContactsScreen from '@screens/ContactsScreen';
+import ProfileScreen from '@screens/ProfileScreen';
 import Colors from 'theme/colors';
-
-const Stack = createStackNavigator();
+import type { RootStackParamList } from '@screens/types';
 
 const styles = StyleSheet.create({
   header: {
@@ -27,16 +27,29 @@ const styles = StyleSheet.create({
   },
 });
 
+const Stack = createStackNavigator<RootStackParamList>();
+
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator mode="modal">
         <Stack.Screen
           name="Contacts"
           component={ContactsScreen}
           options={{
             headerStyle: styles.header,
             headerTintColor: Colors.text,
+          }}
+        />
+        <Stack.Screen
+          name="Profile"
+          component={ProfileScreen}
+          options={{
+            headerShown: false,
+            cardStyleInterpolator:
+              Platform.OS === 'ios'
+                ? CardStyleInterpolators.forModalPresentationIOS
+                : CardStyleInterpolators.forFadeFromBottomAndroid,
           }}
         />
       </Stack.Navigator>

@@ -1,20 +1,25 @@
 import * as React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import ContactsView from '@components/ContactsView';
 
 import data from 'mocks/data';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
+import styles from './styles';
 
 const ContactsScreen: React.FC<void> = ({}) => {
+  const navigation = useNavigation();
+
+  const onPress = React.useCallback(
+    (index: number) => {
+      navigation.navigate('Profile', { id: data[index].id });
+    },
+    [navigation],
+  );
+
   return (
     <View style={styles.container}>
-      <ContactsView data={data} activeAvatarScale={1.1} activeAvatarHighlightColor="#AAAAFF" />
+      <ContactsView data={data} activeAvatarScale={1.1} activeAvatarHighlightColor="#AAAAFF" onPress={onPress} />
     </View>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import Animated, { useAnimatedStyle } from 'react-native-reanimated';
 import { withReanimatedTimer, advanceAnimationByTime } from 'react-native-reanimated/lib/reanimated2/jestUtils';
 import { render, fireEvent } from '@testing-library/react-native';
@@ -11,17 +11,8 @@ const ITEM_HEIGHT = 25;
 const scrollTo = jest.fn();
 
 function TestComponent() {
-  const [
-    isActive,
-    itemWidth,
-    itemHeight,
-    scrollViewARef,
-    scrollViewBRef,
-    scrollHandlerA,
-    scrollHandlerB,
-    scrollA,
-    scrollB,
-  ] = useCoupledScrollViews(scrollTo);
+  const [isActive, itemWidth, itemHeight, scrollHandlerA, scrollHandlerB, scrollA, scrollB] =
+    useCoupledScrollViews(scrollTo);
 
   const animatedStyleA = useAnimatedStyle(() => ({ width: scrollA.value }));
   const animatedStyleB = useAnimatedStyle(() => ({ width: scrollB.value }));

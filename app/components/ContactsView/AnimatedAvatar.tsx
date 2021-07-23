@@ -13,6 +13,7 @@ const AnimatedAvatar: React.FC<AnimatedAvatarProps> = ({
   containerScrollViewRef,
   name,
   image,
+  onPress,
 }) => {
   const animatedAvatarContainerStyles: {
     backgroundColor: string;
@@ -49,6 +50,10 @@ const AnimatedAvatar: React.FC<AnimatedAvatarProps> = ({
           'worklet';
           scrollTo(containerScrollViewRef, offset, 0, true);
         })(index * AVATAR_WIDTH);
+        const distance = Math.abs(animatedScrollOffset.value - index * AVATAR_WIDTH);
+        if (distance < 1) {
+          onPress(index);
+        }
       }}>
       <Animated.View accessibilityLabel={name} style={[styles.avatarContainer, animatedAvatarContainerStyles]}>
         <Image style={styles.avatar} source={image} />

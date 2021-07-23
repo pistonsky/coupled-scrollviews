@@ -19,6 +19,7 @@ export declare type ContactsViewProps = {
   data: Contact[];
   activeAvatarScale: number;
   activeAvatarHighlightColor: string;
+  onPress: (index: number) => void;
 };
 
 export declare type AnimatedAvatarProps = {
@@ -29,4 +30,5 @@ export declare type AnimatedAvatarProps = {
   containerScrollViewRef: React.RefObject<Animated.ScrollView>;
   name: string;
   image: ImageSourcePropType;
+  onPress: (index: number) => void;
 };

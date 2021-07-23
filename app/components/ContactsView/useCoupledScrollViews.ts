@@ -10,17 +10,19 @@ import Animated, {
 
 import type { Lock } from './types';
 
-const useCoupledScrollViews: (mockedScrollTo: (ref: RefObject<Animated.ScrollView>, x: number, y: number, animated: boolean) => void) => [
+const useCoupledScrollViews: (
+  mockedScrollTo?: (ref: RefObject<Animated.ScrollView>, x: number, y: number, animated: boolean) => void,
+) => [
   Animated.SharedValue<number>,
   Animated.SharedValue<number>,
   Animated.SharedValue<number>,
-  React.RefObject<Animated.ScrollView>,
-  React.RefObject<Animated.ScrollView>,
   (event: NativeSyntheticEvent<NativeScrollEvent>) => void,
   (event: NativeSyntheticEvent<NativeScrollEvent>) => void,
   Animated.SharedValue<number>,
   Animated.SharedValue<number>,
-] = (mockedScrollTo: (ref: RefObject<Animated.ScrollView>, x: number, y: number, animated: boolean) => void) => {
+  React.RefObject<Animated.ScrollView>,
+  React.RefObject<Animated.ScrollView>,
+] = (mockedScrollTo?: (ref: RefObject<Animated.ScrollView>, x: number, y: number, animated: boolean) => void) => {
   const scrollA: Animated.SharedValue<number> = useSharedValue<number>(0);
   const scrollB: Animated.SharedValue<number> = useSharedValue<number>(0);
   const scrollX: Animated.SharedValue<number> = useSharedValue<number>(0);
@@ -76,12 +78,12 @@ const useCoupledScrollViews: (mockedScrollTo: (ref: RefObject<Animated.ScrollVie
     isActive,
     itemWidth,
     itemHeight,
-    scrollViewARef,
-    scrollViewBRef,
     scrollHandlerA,
     scrollHandlerB,
     scrollA,
     scrollB,
+    scrollViewARef,
+    scrollViewBRef,
   ];
 };
 
